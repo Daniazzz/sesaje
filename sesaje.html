@@ -3,22 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Website</title>
+    <title>My Space</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="C:\xampp\htdocs\dashboard\Project1\css\passion.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <style>
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background: #333;
-  color: #fff;
-  padding: 1em 0;
-}
+ body {
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url('https://i.ibb.co/5xcTjmT/bgall.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #F0FFFF;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #000000;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .header nav {
+            display: flex;
+            gap: 20px;
+        }
+        .header nav a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .header nav a:hover {
+            background-color: #333;
+            color: #000000;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-radius: 5px;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .video-container {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .description {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .description h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .description p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .additional-images {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .additional-images img {
+            width: 100%;
+            height: auto;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .additional-images-item {
+            flex: 1;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .additional-images-item:hover {
+            transform: translateY(-10px);
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .footer .social-media a {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer .social-media a:hover {
+            color: #00aaff;
+        }
+        .footer p {
+            margin: 10px 0 0;
+            font-size: 0.9rem;
+        }
 
 nav ul {
   list-style: none;
@@ -44,25 +188,52 @@ main {
 
 </style>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h1>Welcome to Our Website</h1>
-      <p>This is a responsive web page.</p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2024 Your Company</p>
-  </footer>
-  <script src="scripts.js"></script>
+    <div class="container">
+        <header class="header">
+            <h1>Nini.Space</h1>
+            <div class="dropdown">
+                <button class="dropbtn">About Me</button>
+                <div class="dropdown-content">
+                    <a href="home.html">Home</a>
+                    <a href="photo.html">Photo Gallery</a>
+                    <a href="myself.html">Myself</a>
+                    <a href="edu.html">Education</a>
+                    <a href="passion.html">Passion</a>
+                    <a href="comment.html">Comment</a>
+                    <a href="bmi.html">BMI Calculator</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4nbkse6QHIY?si=ckZtCHQdXgmgl6FR" 
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="description">
+                <h2>Sulam Day!</h2>
+                <p>
+                    If I get the chance to pursue my dreams, this is one of if! I really love dancing especially Malay Traditional Dances. Also, I like to choreograph a dance, mainly I'll go with Hip-Hop and K-pop style. Even so, I take dancing as my hobby but if I can widen my dancing style to the Art&Music industry why not!
+                </p>
+            </div>
+        </div>
+
+        <div class="additional-images">
+            <div class="additional-images-item"><img src="https://i.ibb.co/bsJVmHY/dance1.jpg" alt="Image 1"></div>
+            <div class="additional-images-item"><img src="https://i.ibb.co/QJ6xdSC/dance2.jpg" alt="Image 2"></div>
+            <div class="additional-images-item"><img src="https://i.ibb.co/qk3vCxV/dance3.jpg" alt="Image 3"></div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="social-media">
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:example@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2024 Nini.Space. All rights reserved.</p>
+    </footer>
 </body>
+</html>
 </html>
